@@ -1,6 +1,7 @@
 <?php
 
-class BackendHelperForm extends HelperForm {
+class BackendHelperForm extends HelperForm
+{
     public function __construct($name) {
         parent::__construct();
 
@@ -51,7 +52,7 @@ class BackendHelperForm extends HelperForm {
 
         $this->fields_value['config[PINTEREST_PROFILE_WIDGET_SCALE_WIDTH]'] = Configuration::get('PINTEREST_PROFILE_WIDGET_SCALE_WIDTH');
 
-        $this->fields_form = [ [ 'form' => [
+        $this->fields_form = [['form' => [
             'legend' => [
                 'title' => $this->l('Settings'),
                 'icon' => 'icon-cogs'
@@ -82,7 +83,7 @@ class BackendHelperForm extends HelperForm {
                     'name' => 'config[PINTEREST_PROFILE_WIDGET_URL]',
                     'label' => $this->l('Profile URL'),
                     'hint' => 'e.g. https://www.pinterest.com/anapinskywalker/',
-                    'required' => false
+                    'required' => true
                 ],
                 [
                     'type' => 'text',
@@ -115,6 +116,6 @@ class BackendHelperForm extends HelperForm {
                 'title' => $this->l('Save'),
                 'class' => 'btn btn-default pull-right'
             ]
-        ] ] ];
+        ]]];
     }
 }
